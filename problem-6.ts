@@ -4,7 +4,7 @@ interface Profile {
     email: string;
 }
 
-const updateProfile = (profile: Profile, updates: { name?: string; age?: number; email?: string }): Profile => {
+const updateProfile = (profile: Profile, updates: Partial<Profile>): Profile => {
     return { ...profile, ...updates };
 };
 
